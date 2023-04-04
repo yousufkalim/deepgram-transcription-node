@@ -17,9 +17,9 @@ const upload = multer({
       cb(null, `${Date.now()} -  ${file.originalname}`); // Callback
     },
   }),
-  // File size limit upto 5 mb
+  // File size limit upto 100 mb
   limits: {
-    fileSize: 1024 * 1024 * 5,
+    fileSize: 1024 * 1024 * 100,
   },
 });
 
