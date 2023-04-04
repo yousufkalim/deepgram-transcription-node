@@ -1,5 +1,5 @@
 {
-  "name": "node-typescript",
+  "name": "transcription",
   "version": "1.0.0",
   "description": "NodeJS boilerplate with TypeScript",
   "main": "src/index.ts",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yousufkalim/node-ts-boilerplate.git"
+    "url": "git+https://github.com/yousufkalim/transcription-node.git"
   },
   "author": "Yousuf Kalim <yousufkalim@outlook.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yousufkalim/node-ts-boilerplate/issues"
+    "url": "https://github.com/yousufkalim/transcription-node/issues"
   },
-  "homepage": "https://github.com/yousufkalim/node-ts-boilerplate#readme",
+  "homepage": "https://github.com/yousufkalim/transcription-node#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

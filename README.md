@@ -1,4 +1,4 @@
-# NodeJS TypeScript Boilerplate
+# Transcription
 
 Installation steps to run server locally
 
