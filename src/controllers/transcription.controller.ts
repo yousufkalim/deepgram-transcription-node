@@ -17,7 +17,7 @@ const deepgram = new Deepgram(DEEPGRAM_SECRET);
  */
 export const transcribePreRecorded = async (req: Request, res: Response): Promise<Response> => {
   try {
-    if (!req.file?.path || req.body.audio_url) {
+    if (!req.file?.path && !req.body.audio_url) {
       return res.status(400).json({ success: false, message: 'File or URL not provided' });
     }
 
@@ -31,7 +31,7 @@ export const transcribePreRecorded = async (req: Request, res: Response): Promis
     } else {
       // File is local
       // Open the audio file
-      const audio = fs.readFileSync(req.file.path);
+      const audio = fs.readFileSync(req.file?.path as string);
 
       // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
       source = {
@@ -51,7 +51,7 @@ export const transcribePreRecorded = async (req: Request, res: Response): Promis
     return res.json({
       success: true,
       summaries: response.results?.channels[0]?.alternatives[0]?.summaries,
-      transcript: response.results?.channels[0]?.alternatives[0]?.transcript,
+      transcript: response.results?.channels[0]?.alternatives[0]?.paragraphs,
     });
   } catch (err) {
     // Error handling
