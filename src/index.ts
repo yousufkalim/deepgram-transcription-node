@@ -1,5 +1,5 @@
 /**
- * Node-JS Boilerplate
+ * Transcription
  * @author Yousuf Kalim
  */
 import '@database';
